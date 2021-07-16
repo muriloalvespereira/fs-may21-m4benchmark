@@ -271,3 +271,99 @@ span {
 .svg-color {
   fill: rgba(255, 255, 255, 0.5);
 }
+
+.bottom-bar {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  bottom: 0px;
+  background-color: rgb(18, 18, 18);
+  z-index: 999;
+}
+
+.row-bottom {
+  margin-left: 1px;
+}
+.img-nav-bottom {
+  justify-content: flex-end;
+  padding-top: 20px;
+  padding-right: 0px !important;
+  width: 250px !important;
+}
+
+.img-nav-bottom:hover .photo-play {
+  opacity: 1;
+  transform: translateY(-5px);
+}
+
+.img-nav-bottom:hover {
+  cursor: pointer;
+}
+.card-img-bottom {
+  width: 70px;
+  height: 50px;
+}
+
+.photo-play {
+  position: absolute;
+  bottom: 35px;
+  right: 1px;
+  width: 28px;
+  height: 28px;
+  font-size: x-large;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.4s ease;
+}
+
+.photo-play:hover {
+  opacity: 1;
+  transform: translateY(10px);
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.direction-bar {
+  flex-direction: column;
+  position: relative;
+}
+
+.h6-bottom {
+  color: white;
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+}
+.p-bottom {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #b6b6b6;
+  font-size: 12px;
+}
+
+.window-btn-bottom {
+  padding-left: 0px;
+}
+
+.queue-btn {
+  padding-top: 20px;
+  fill: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.play-bottom {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transition: all 0.4s ease;
+}
+
+.margin-volume {
+  margin-top: 43px;
+}
+
+.col-volume {
+  justify-content: flex-end !important;
+}
