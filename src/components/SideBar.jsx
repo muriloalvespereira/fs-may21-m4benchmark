@@ -1,4 +1,5 @@
 import { Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Drake from "../assets/drake.png";
 
 const SideBar = () => {
@@ -36,7 +37,7 @@ const SideBar = () => {
                 </svg>
               </div>
               <div className="d-flex">
-                <h6 className="d-flex pl-3 mb-0">Home</h6>
+                <Link to="/"><h6 className="d-flex pl-3 mb-0">Home</h6></Link>
               </div>
             </Col>
             <div className="col-12 search d-flex align-items-center pb-3 put-color">
@@ -124,7 +125,7 @@ const SideBar = () => {
         <section className="ml-4">
           <footer>
             <div className="d-flex align-items-center pt-3 put-color">
-              <div className="pb-3 d-flex">
+              <div className="pb-3 d-flex mb-3">
                 <svg
                   role="img"
                   height="20"
@@ -136,7 +137,7 @@ const SideBar = () => {
                 </svg>
               </div>
               <div className="d-flex">
-                <h6 className="mb-3 pl-1">Upgrade to premium</h6>
+                <h6 className="upgrade-premium pl-1">Upgrade to premium</h6>
               </div>
             </div>
             <div

@@ -19,7 +19,7 @@ const BottomBar = () => {
                     alt="..."
                   />
               <div className="photo-play">
-                <FaChevronUp />
+                <FaChevronUp className="text-white mb-3" />
               </div>
             </Col>
             <Col className="d-flex direction-bar pt-1">

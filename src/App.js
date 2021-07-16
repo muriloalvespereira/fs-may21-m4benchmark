@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import BottomBar from "./components/BottomBar";
 import Home from "./components/Home";
+import Album from "./components/Album";
+import Artist from "./components/Artist";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
             <Col className="col-11 nav-bar">
               <CustomNavbar />
             <Route path="/" exact component={Home} />
+            <Route path="/album/:id" exact component={Album} />
+            <Route path="/artist" exact component={Artist} />
             </Col>
           </Row>
           <Row>

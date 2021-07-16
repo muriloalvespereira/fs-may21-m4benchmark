@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(24, 24, 24);
+  background: linear-gradient(
+    360deg,
+    rgba(24, 24, 24, 1) 69%,
+    rgba(47, 11, 11, 1) 88%,
+    rgba(62, 8, 8, 1) 100%
+  );
 }
 
 code {
@@ -22,11 +29,16 @@ code {
   width: 236px;
   background-color: black;
   position: fixed;
+  z-index: 1021;
 }
 
 .col-sidebar {
   padding-right: 0px !important;
 }
+h6 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .put-color {
   color: rgba(255, 255, 255, 0.5);
   fill: rgba(255, 255, 255, 0.5);
@@ -169,14 +181,23 @@ footer {
   background-color: black;
 }
 
+.upgrade-premium {
+  margin-bottom: 30px;
+}
+
 .bg-color {
+  background-color: transparent !important;
+  padding-left: 105px !important;
+  padding-right: 30px !important;
+  transition: all 1s ease-in;
+}
+.bg-color.active {
   background-color: rgba(0, 0, 0, 1) !important;
-  padding-left: 60px !important;
 }
 
 .nav-bar {
   padding-right: 0px !important;
-  padding-left: 100px !important;
+  padding-left: 25px !important;
 }
 
 .button-nav-left {
@@ -223,19 +244,15 @@ footer {
 
 .account-avatar {
   position: absolute;
-  pointer-events: none;
+  pointer-events: initial;
   background-color: #252525;
   border-radius: 3px;
   transform: translateY(90px);
   right: 0px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.25s ease;
 }
 
-.avatar-nav:hover .account-avatar {
-  pointer-events: initial;
-  opacity: 1;
-}
 .menu-avatar {
   flex-direction: column;
   width: 180px;
@@ -275,11 +292,11 @@ span {
 
 .bottom-bar {
   position: fixed;
-  height: 100px;
+  height: 110px;
   width: 100%;
   bottom: 0px;
   background-color: rgb(18, 18, 18);
-  z-index: 1000;
+  z-index: 1022;
 }
 
 .row-bottom {
@@ -301,8 +318,8 @@ span {
   cursor: pointer;
 }
 .card-img-bottom {
-  width: 70px;
-  height: 50px;
+  min-width: 70px;
+  min-height: 50px;
 }
 
 .photo-play {
@@ -367,4 +384,15 @@ span {
 
 .col-volume {
   justify-content: flex-end !important;
+}
+
+.home-page {
+  margin-top: 40px;
+  margin-bottom: 110px;
+  padding-right: 50px !important;
+  padding-left: 115px !important;
+}
+
+.categories {
+  padding-left: 35px !important;
 }
