@@ -1,13 +1,273 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.spotify-logo-text {
+  width: 131px;
+  height: 40px;
+  fill: white;
+}
+
+.side-bar {
+  width: 236px;
+  background-color: black;
+}
+
+.col-sidebar {
+  padding-right: 0px !important;
+}
+.put-color {
+  color: rgba(255, 255, 255, 0.5);
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.put-color:hover h6 {
+  color: white;
+  cursor: pointer;
+}
+.put-color:hover svg {
+  fill: white;
+  cursor: pointer;
+}
+.put-color:hover #library-icon {
+  fill: white;
+  cursor: pointer;
+}
+#library-icon {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.search:hover,
+.home:hover,
+.library:hover,
+.liked:hover,
+.create:hover {
+  color: white;
+}
+
+.btn-create {
+  padding: 6px;
+  cursor: pointer;
+}
+
+.plus-btn {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  background-color: #b6b6b6;
+  padding: 0;
+  margin: auto;
+}
+
+.plus-btn::before {
+  content: "";
+  position: absolute;
+  width: 0.1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: black;
+}
+.plus-btn::after {
+  content: "";
+  position: absolute;
+  height: 0.1rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: black;
+}
+
+.liked-songs {
+  background: linear-gradient(135deg, #450af5, #c4efd9);
+  background-image: linear-gradient(
+    135deg,
+    rgb(69, 10, 245),
+    rgb(196, 239, 217)
+  );
+  width: 22px;
+  height: 22px;
+}
+
+.borderBottom {
+  border-bottom: 1px solid rgb(43, 43, 43) !important;
+}
+
+.list-unstyled {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.color-svg {
+  color: gray;
+  fill: gray;
+  stroke: gray;
+}
+
+.under-upgrade {
+  position: absolute;
+  transform: translateX(-25px);
+  top: 0;
+  right: 0;
+  bottom: 0px;
+  left: 0px;
+}
+
+.under-upgrade:hover .photo-play-two {
+  opacity: 1;
+  transform: translateY(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.under-premium {
+  width: 237px;
+}
+
+.photo-play-two {
+  position: absolute;
+  bottom: 185px;
+  right: -50px;
+  width: 28px;
+  height: 28px;
+  font-size: x-large;
+  opacity: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transition: all 0.4s ease;
+}
+
+.photo-play-two:hover {
+  opacity: 1;
+  transform: translateY(10px);
+  background-color: rgba(0, 0, 0, 1);
+}
+.under-upgrade:hover .photo-play-two {
+  opacity: 1;
+  transform: translateY(10px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  position: fixed;
+  bottom: 90px;
+  background-color: black;
+}
+
+.bg-color {
+  background-color: rgba(0, 0, 0, 1) !important;
+  padding-left: 60x !important;
+}
+
+.nav-bar {
+  padding-right: 0px !important;
+  padding-left: 100px !important;
+}
+
+.button-nav-left {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  padding-left: 2px;
+  cursor: pointer;
+}
+.button-nav-right {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  padding-left: 3px;
+  cursor: pointer;
+}
+
+.arrows-left {
+  vertical-align: top;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+.arrows-right {
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+.avatar-nav {
+  position: relative;
+  background-color: black;
+  height: 30px;
+  width: 150px;
+  border-radius: 50px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.img-avatar {
+  width: 25px;
+  height: 25px;
+}
+
+.account-avatar {
+  position: absolute;
+  pointer-events: none;
+  background-color: #252525;
+  border-radius: 3px;
+  transform: translateY(90px);
+  right: 0px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.avatar-nav:hover .account-avatar {
+  pointer-events: initial;
+  opacity: 1;
+}
+.menu-avatar {
+  flex-direction: column;
+  width: 180px;
+  justify-content: space-between;
+  height: 140px;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+.menu-avatar > div:hover {
+  background-color: #3e3e3e;
+}
+
+.hide-over {
+  overflow: hidden;
+}
+
+.btw-menu-avatar {
+  justify-content: space-between;
+}
+
+.a-changes-menu {
+  color: white;
+}
+
+span {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.svg-color {
+  fill: rgba(255, 255, 255, 0.5);
 }
