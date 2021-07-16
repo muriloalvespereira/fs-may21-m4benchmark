@@ -1,9 +1,10 @@
 import "./App.css";
 import CustomNavbar from "./components/CustomNavbar";
 import SideBar from "./components/SideBar";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import BottomBar from "./components/BottomBar";
+import Home from "./components/Home";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             </Col>
             <Col className="col-11 nav-bar">
               <CustomNavbar />
+            <Route path="/" exact component={Home} />
             </Col>
           </Row>
           <Row>

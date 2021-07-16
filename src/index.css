@@ -21,6 +21,7 @@ code {
 .side-bar {
   width: 236px;
   background-color: black;
+  position: fixed;
 }
 
 .col-sidebar {
@@ -170,7 +171,7 @@ footer {
 
 .bg-color {
   background-color: rgba(0, 0, 0, 1) !important;
-  padding-left: 60x !important;
+  padding-left: 60px !important;
 }
 
 .nav-bar {
@@ -278,7 +279,7 @@ span {
   width: 100%;
   bottom: 0px;
   background-color: rgb(18, 18, 18);
-  z-index: 999;
+  z-index: 1000;
 }
 
 .row-bottom {

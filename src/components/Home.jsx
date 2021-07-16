@@ -1,11 +1,58 @@
-import { Container } from "react-bootstrap"
+import { Container } from "react-bootstrap";
 
 const Home = () => {
-
-    <Container fluid>
-        
+  return (
+    <Container>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
+      <p>Hello World</p>
     </Container>
+  );
+};
 
-}
-
-export default Home
+export default Home;
