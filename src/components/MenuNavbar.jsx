@@ -1,6 +1,24 @@
-const MenuNavbar = () => {
+import { useEffect } from "react";
+import { useRef } from "react";
+
+const MenuNavbar = (props) => {
+
+    let menuRef = useRef()
+
+    useEffect(() => {
+        let handler = (event) => {
+            if(!menuRef.current.contains(event.target)){
+                props.hideMenu()
+            }
+        }
+        document.addEventListener("mousedown", handler);
+        return () => {
+
+            document.removeEventListener("mousedown", handler)
+        }
+    })
   return (
-    <div className="account-avatar">
+    <div ref={menuRef} className="account-avatar">
       <div className="p-2 d-flex menu-avatar">
         <div
           className="

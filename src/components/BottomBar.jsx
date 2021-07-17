@@ -5,13 +5,14 @@ import { FaTabletAlt } from "react-icons/fa";
 import { BsMusicNoteList } from "react-icons/bs";
 import barImg from "../assets/smalldrake.jpg";
 
-const BottomBar = () => {
+const BottomBar = (props) => {
+
   return (
     <div className="bottom-bar">
       <div className="d-flex justify-content-between">
         <Col className="d-flex no-gutters pl-0">
           <Row className="row-bottom">
-            <Col className="pl-5 img-nav-bottom">
+            <Col className={props.toggleCover ? 'pl-5 img-nav-bottom d-none' : 'pl-5 img-nav-bottom'}>
               {/* <div className="card-img-bottom"></div> */}
               <img
                     src={barImg}
@@ -19,10 +20,10 @@ const BottomBar = () => {
                     alt="..."
                   />
               <div className="photo-play">
-                <FaChevronUp className="text-white mb-3" />
+                <FaChevronUp onClick={() => props.showCover()} className="text-white mb-3" style={{width: "15px"}}/>
               </div>
             </Col>
-            <Col className="d-flex direction-bar pt-1">
+            <Col className={props.toggleCover ? 'd-flex direction-bar pt-1 cover-small-bottom' : 'd-flex direction-bar pt-1'}>
               <h6 className="pt-4 mt-2 mb-0 h6-bottom text-nowrap">Survival</h6>
               <p className="mb-0 p-bottom">Drake</p>
             </Col>
@@ -80,7 +81,7 @@ const BottomBar = () => {
             </div>
             <div className="d-inline-block ml-3 pt-3">
               <div className="play-bottom">
-                <FaPlay className="mt-2 ml-1" />
+                <FaPlay className="mt-2 ml-1 play-svg" />
               </div>
             </div>
             <div className="d-inline-block ml-3 queue-btn">

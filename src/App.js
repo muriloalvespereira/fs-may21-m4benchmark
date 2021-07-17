@@ -7,15 +7,23 @@ import BottomBar from "./components/BottomBar";
 import Home from "./components/Home";
 import Album from "./components/Album";
 import Artist from "./components/Artist";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+
+const [toggleCover, setToggleCover] = useState(false)
+
+  const showCover = () => {
+    setToggleCover(!toggleCover)
+  }
+
   return (
     <div className="App">
       <Router>
         <Container fluid>
           <Row>
             <Col className="col-1 col-sidebar">
-              <SideBar />
+              <SideBar showCover={showCover} toggleCover={toggleCover} />
             </Col>
             <Col className="col-11 nav-bar">
               <CustomNavbar />
@@ -25,7 +33,7 @@ function App() {
             </Col>
           </Row>
           <Row>
-            <BottomBar />
+            <BottomBar showCover={showCover} toggleCover={toggleCover} />
           </Row>
         </Container>
       </Router>

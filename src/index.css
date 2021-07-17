@@ -153,6 +153,7 @@ h6 {
 
 .photo-play-two {
   position: absolute;
+  cursor: pointer;
   bottom: 185px;
   right: -50px;
   width: 28px;
@@ -183,6 +184,10 @@ footer {
 
 .upgrade-premium {
   margin-bottom: 30px;
+}
+
+.cover-small-bottom {
+  padding-left: 45px !important;
 }
 
 .bg-color {
@@ -235,6 +240,12 @@ footer {
   border-radius: 50px;
   align-items: center;
   cursor: pointer;
+}
+.avatar-nav:hover {
+  background-color: #252525;
+}
+.avatar-nav.active {
+  background-color: #252525;
 }
 
 .img-avatar {
@@ -341,6 +352,10 @@ span {
   background-color: rgba(0, 0, 0, 1);
 }
 
+.play-svg {
+  width: 10px !important;
+  margin-right: 2px !important;
+}
 .direction-bar {
   flex-direction: column;
   position: relative;

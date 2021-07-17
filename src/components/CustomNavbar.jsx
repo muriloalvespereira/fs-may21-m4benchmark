@@ -18,7 +18,12 @@ const CustomNavbar = () => {
       }
   }
 
-  window.addEventListener('scroll', changeBackground)
+  window.addEventListener('scroll', changeBackground);
+
+  const hideMenu = () => {
+      setMenuNav(false)
+  }
+ 
 
   return (
    <>
@@ -71,7 +76,7 @@ const CustomNavbar = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto"></Nav>
             <Form inline>
-              <div onClick={() => setMenuNav(!menuNav)} className="avatar-nav d-flex justify-content-between pb-1">
+              <div onClick={() => setMenuNav(!menuNav)} className={menuNav ? 'avatar-nav d-flex justify-content-between pb-1 active' : 'avatar-nav d-flex justify-content-between pb-1'}>
                 <div className="pl-1">
                   <img src={avatar} className="img-fluid img-avatar" alt="" />
                 </div>
@@ -83,7 +88,7 @@ const CustomNavbar = () => {
                 </div>
                 {
                 menuNav &&
-                <MenuNavbar />
+                <MenuNavbar hideMenu={hideMenu} />
                 }
               </div>
             </Form>

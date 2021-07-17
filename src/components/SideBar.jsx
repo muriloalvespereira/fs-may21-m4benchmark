@@ -1,13 +1,14 @@
 import { Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Drake from "../assets/drake.png";
+import { FaChevronDown } from "react-icons/fa";
 
-const SideBar = () => {
+const SideBar = (props) => {
   
 
   return (
     <Row className="side-bar vh-100">
-      <Col className="col-12">
+      <Col className="col-12 pl-0">
         <div className="text-left ml-4">
           <svg
             viewBox="0 0 1134 340"
@@ -141,13 +142,13 @@ const SideBar = () => {
               </div>
             </div>
             <div
-              className="position-relative show-album d-none"
+              className={props.toggleCover ? 'position-relative show-album' : 'position-relative show-album d-none'}
               style={{ height: "218px" }}
             >
               <div className="under-upgrade">
                 <img src={Drake} className="under-premium" alt="" />
                 <div className="photo-play-two">
-                  <i className="fas fa-chevron-down"></i>
+                  <FaChevronDown onClick={() => props.showCover()} className="text-white mb-3" style={{width: "15px"}}/>
                 </div>
               </div>
             </div>
